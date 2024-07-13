@@ -65,7 +65,7 @@ app.frame('/', (c) => {
 
 app.hono.get('/followers', async (c) => {
   try {
-    const { users } = await neynarClient.fetchBulkUsers([1, 2, 3, 4, 5])
+    const { users } = await neynarClient.fetchBulkUsers([1, 2, 3, 4])
     return c.json({ users })
   } catch (error) {
     console.error(error)
